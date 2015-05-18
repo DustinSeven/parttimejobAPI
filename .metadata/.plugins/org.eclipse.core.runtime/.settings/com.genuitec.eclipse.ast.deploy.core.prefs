@@ -1,0 +1,14 @@
+#Mon May 18 12:31:02 CST 2015
+tomcat7Server.parttimejobAPI.isUptoDate=true
+tomcat7Server.parttimejobAPI.altContextRoot=
+tomcat7Server.parttimejobAPI.deploymentPath=/Users/lee/Documents/Tomcat/webapps/parttimejobAPI
+tomcat7Server.parttimejobAPI.type=WebDeployment
+tomcat7Server.parttimejobAPI.isDeployed=true
+tomcat7Server.parttimejobAPI.shouldOverwrite=false
+tomcat7Server.parttimejobAPI.noFileCopy=false
+eclipse.preferences.version=1
+tomcat7Server.parttimejobAPI.deployIsOverProject=false
+tomcat7Server.parttimejobAPI.contextRoot=/parttimejobAPI
+tomcat7Server.parttimejobAPI.isExploded=true
+tomcat7Server.parttimejobAPI.IEARProjectName=
+tomcat7Server.parttimejobAPI.shouldBackup=false

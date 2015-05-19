@@ -39,6 +39,7 @@ public class EnterpriseInfoDAO extends HibernateDaoSupport implements IEnterpris
         try {
             getHibernateTemplate().save(transientInstance);
             log.debug("save successful");
+            getHibernateTemplate().flush();
         } catch (RuntimeException re) {
             log.error("save failed", re);
             throw re;
@@ -152,6 +153,7 @@ public class EnterpriseInfoDAO extends HibernateDaoSupport implements IEnterpris
         try {
             getHibernateTemplate().saveOrUpdate(instance);
             log.debug("attach successful");
+            getHibernateTemplate().flush();
         } catch (RuntimeException re) {
             log.error("attach failed", re);
             throw re;

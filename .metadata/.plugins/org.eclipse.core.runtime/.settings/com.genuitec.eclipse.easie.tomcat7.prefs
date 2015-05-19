@@ -1,6 +1,9 @@
-#Mon May 18 12:30:55 CST 2015
+#Mon May 18 18:22:11 CST 2015
 SERVER_ENABLEMENT=true
+LIBRARY_PATH="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin\:/Users/lee/Documents/Tomcat/bin"
 eclipse.preferences.version=1
+JDK_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 TOMCAT_BASE=/Users/lee/Documents/Tomcat
+ENDORSED_DIRS="/Users/lee/Documents/Tomcat/common/endorsed"
 TOMCAT_HOME=/Users/lee/Documents/Tomcat
 TOMCAT_TEMP=/Users/lee/Documents/Tomcat/temp

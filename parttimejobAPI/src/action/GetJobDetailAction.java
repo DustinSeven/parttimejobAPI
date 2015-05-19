@@ -61,6 +61,7 @@ public class GetJobDetailAction {
 			map.put("parttimlogo", jobDetail.getImg());
 			map.put("parttimeid", jobDetail.getJobid());
 			map.put("recruitment_title", jobDetail.getName());
+			map.put("payunit", jobDetail.getPayUnit().getName());
 			map.put("unit", jobDetailService.getConpany(jobDetail.getEnterpriseAccount().getEnterpriseid()));
 			map.put("workhours", jobDetail.getTime());
 			DateFormat format = new SimpleDateFormat("yyyy-MM-dd");

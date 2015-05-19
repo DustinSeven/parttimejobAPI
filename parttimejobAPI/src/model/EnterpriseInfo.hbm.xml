@@ -28,5 +28,11 @@
         <property name="company" type="java.lang.String">
             <column name="company" />
         </property>
+        <property name="email" type="java.lang.String">
+            <column name="email" />
+        </property>
+        <property name="qq" type="java.lang.String">
+            <column name="qq" />
+        </property>
     </class>
 </hibernate-mapping>

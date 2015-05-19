@@ -20,4 +20,6 @@ public interface IEnterpriseLoginService {
 	public abstract EnterpriseInfo getEnterpriseInfo(String id);
 	public abstract boolean addAccount(EnterpriseAccount account);
 	public abstract void changePwd(EnterpriseAccount Account);
+	public abstract EnterpriseAccount getAccount (EnterpriseAccount account);
+	public abstract void updateUserInfo(EnterpriseInfo userInfo);
 }

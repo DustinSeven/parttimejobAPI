@@ -42,10 +42,12 @@ public String execute() {
 			{
 				map.put("id", tmpInfo.getEnterpriseid());
 				map.put("account", tmpInfo.getAccount());
-				map.put("sex", tmpInfo.getSex());
+				map.put("sex",String.valueOf(tmpInfo.getSex()));
 				map.put("remark", tmpInfo.getRemark());
 				map.put("img", tmpInfo.getImg());
 				map.put("company", tmpInfo.getCompany());
+				map.put("email", tmpInfo.getEmail());
+				map.put("qq", tmpInfo.getQq());
 			}
 			List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 			list.add(map);

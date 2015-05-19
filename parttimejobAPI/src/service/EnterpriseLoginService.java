@@ -90,4 +90,24 @@ public class EnterpriseLoginService implements IEnterpriseLoginService {
 		enterpriseAccountDAO.merge(Account);
 	}
 
+	public EnterpriseAccount getAccount (EnterpriseAccount account)
+	{
+		
+		List accountList = enterpriseAccountDAO.findByProperty("mobile", account.getMobile());
+		if(accountList.size() == 0)
+			return null;
+		for(int i = 0;i<accountList.size();++i)
+		{
+			EnterpriseAccount tmpAccount = (EnterpriseAccount)accountList.get(i);
+			if(tmpAccount.getPassword().equals(account.getPassword()))
+				return (EnterpriseAccount) accountList.get(0);
+		}
+		return null;
+	}
+	
+	public void updateUserInfo(EnterpriseInfo userInfo)
+	{
+//		System.out.print(userInfo.getEnterpriseid() + " "+userInfo.getAccount()+" "+userInfo.getImg());
+		enterpriseInfoDAO.attachDirty(userInfo);
+	}
 }

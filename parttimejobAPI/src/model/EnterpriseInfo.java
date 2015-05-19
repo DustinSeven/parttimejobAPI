@@ -19,6 +19,8 @@ public class EnterpriseInfo  implements java.io.Serializable {
      private String remark;
      private String img;
      private String company;
+     private String email;
+     private String qq;
 
 
     // Constructors
@@ -34,7 +36,7 @@ public class EnterpriseInfo  implements java.io.Serializable {
     }
     
     /** full constructor */
-    public EnterpriseInfo(Long enterpriseid, EnterpriseAccount enterpriseAccount, String account, Integer sex, String remark, String img, String company) {
+    public EnterpriseInfo(Long enterpriseid, EnterpriseAccount enterpriseAccount, String account, Integer sex, String remark, String img, String company,String email,String qq,String name) {
         this.enterpriseid = enterpriseid;
         this.enterpriseAccount = enterpriseAccount;
         this.account = account;
@@ -42,12 +44,31 @@ public class EnterpriseInfo  implements java.io.Serializable {
         this.remark = remark;
         this.img = img;
         this.company = company;
+        this.email = email;
+        this.qq = qq;
     }
 
    
     // Property accessors
 
-    public Long getEnterpriseid() {
+    
+    public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getQq() {
+		return qq;
+	}
+
+	public void setQq(String qq) {
+		this.qq = qq;
+	}
+
+	public Long getEnterpriseid() {
         return this.enterpriseid;
     }
     

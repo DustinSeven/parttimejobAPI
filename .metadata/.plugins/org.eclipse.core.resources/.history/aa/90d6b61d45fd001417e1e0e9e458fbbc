@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="strutsBean" extends="struts-default" namespace="/">
+
+
+		<action name="enterprisechangepwd" class="EnterpriseChangePwdAction">
+		</action>
+
+		<action name="enterpriseregister" class="EnterpriseRegisterAction">
+		</action>
+
+		<action name="getenterpriseinfo" class="GetEnterpriseInfoAction">
+		</action>
+
+		<action name="enterpriselogin" class="EnterpriseLoginAction">
+		</action>
+
+		<action name="login" class="LoginAction">
+		</action>
+
+		<action name="getuserinfo" class="GetUserInfoAction">
+		</action>
+
+		<action name="getprovince" class="GetProvinceAction">
+		</action>
+
+		<action name="getcity" class="GetCityAction">
+		</action>
+
+		<action name="getarea" class="GetAreaAction">
+		</action>
+
+		<action name="getallcollege" class="GetAllCollegeAction">
+		</action>
+
+		<action name="getallschool" class="GetAllSchoolAction">
+		</action>
+
+		<action name="uploaduserimg" class="UploadUserImgAction">
+		</action>
+
+		<action name="updateuserinfo" class="UpdateUserInfoAction">
+		</action>
+
+		<action name="getjoblist" class="GetJobListAction">
+		</action>
+
+		<action name="getalljobtype" class="GetAllJobTypeAction">
+		</action>
+
+		<action name="register" class="RegisterAction">
+		</action>
+
+		<action name="changepassword" class="ChangePasswordAction">
+		</action>
+
+		<action name="getjobdetail" class="GetJobDetailAction">
+		</action>
+
+		<action name="getschoolmate" class="GetSchoolmateAction">
+		</action>
+
+		<action name="getlongenroll" class="GetLongJobEnrollAction">
+		</action>
+
+		<action name="getshortdate" class="GetShortDateAction">
+		</action>
+
+		<action name="registrationlong" class="RegistrationLongAction">
+		</action>
+
+		<action name="registrationshort" class="RegistrationShortAction">
+		</action>
+
+		<action name="getusersetting" class="GetUserSettingAction">
+		</action>
+
+		<action name="setusersetting" class="SetUserSettingAction">
+		</action>
+
+		<action name="getmyregistration" class="GetMyRegistrationAction">
+		</action>
+
+		<action name="getmyregistrationdetail" class="GetMyRegistrationDetailAction">
+		</action>
+
+		<action name="advice" class="AdviceAction">
+		</action>
+
+	</package>
+</struts>    

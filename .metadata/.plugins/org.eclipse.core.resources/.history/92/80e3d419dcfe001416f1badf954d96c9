@@ -1,0 +1,34 @@
+package action;
+
+import java.sql.Timestamp;
+import java.util.Date;
+
+import model.Area;
+import model.EnterpriseAccount;
+import model.JobType;
+import model.PayCountType;
+import model.PayUnit;
+
+public class ReleaseJobAction {
+	
+    private long payunitid;
+    private long jobtypeid;
+    private long paycounttypeid;
+    private String name;
+    private long enterid;
+    private double pay;
+    private String time;
+    private Date deadline;
+    private String address;
+    private int num;
+    private int sex;
+    private float height;
+    private int health;
+    private int interview;
+    private String interviewaddr;
+    private String interviewtime;
+    private String jobContent;
+    private int worktimetype;
+    private long areaid;
+
+}

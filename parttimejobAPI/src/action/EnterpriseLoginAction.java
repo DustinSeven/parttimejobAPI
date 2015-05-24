@@ -44,8 +44,6 @@ public class EnterpriseLoginAction {
 		tmpAccount.setMobile(mobile);
 		tmpAccount.setPassword(pwd);
 		
-		System.out.print(mobile + " " + pwd);
-		
 		String result = enterpriseLoginService.checkAccount(tmpAccount);
 		Map<String, Object> map = new HashMap<String, Object>();
 

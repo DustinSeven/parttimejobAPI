@@ -1,8 +1,10 @@
 package service;
 
+import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,9 +22,14 @@ import model.UserAccount;
 import model.UserJobLong;
 import model.UserJobShort;
 
+import daoImp.IAreaDAO;
+import daoImp.IEnterpriseAccountDAO;
 import daoImp.IEnterpriseInfoDAO;
 import daoImp.IJobDateDAO;
 import daoImp.IJobDetailDAO;
+import daoImp.IJobTypeDAO;
+import daoImp.IPayCountTypeDAO;
+import daoImp.IPayUnitDAO;
 import daoImp.IUserJobLongDAO;
 import daoImp.IUserJobShortDAO;
 
@@ -34,6 +41,11 @@ public class JobDetailService implements IJobDetailService {
 	private IUserJobShortDAO userJobShortDAO;
 	private IJobDateDAO jobDateDAO;
 	
+//	private IPayUnitDAO payUnitDAO;
+//	private IJobTypeDAO jobTypeDAO;
+//	private IPayCountTypeDAO payCountTypeDAO;
+//	private IEnterpriseAccountDAO enterpriseAccountDAO;
+//	private IAreaDAO areaDAO;
 	
 	public IJobDateDAO getJobDateDAO() {
 		return jobDateDAO;
@@ -104,10 +116,37 @@ public class JobDetailService implements IJobDetailService {
 		return jobs;
 	}
 	
-	public void saveJob(JobDetail job)
+	public List getJobDetailList(int page,int pageSize,long enterId)
 	{
-		
+		JobDetail detail = new JobDetail();
+		if(pageSize == 0)
+			pageSize = 10;
+		List jobs = jobDetailDAO.findByProperty(page,pageSize, enterId);
+		return jobs;
 	}
+	
+	public void saveJob(JobDetail job,long userId)
+	{
+		job.setEnable(1);
+		job.setOverdue(0);
+		Date date = new Date();
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String dateStr = f.format(date);
+		Timestamp ts = Timestamp.valueOf(dateStr);
+		job.setCreatetime(ts);
+		jobDetailDAO.save(job);
+	}
+	
+	public void saveJobDate(JobDate jobDate)
+	{
+		Date date = new Date();
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String dateStr = f.format(date);
+		Timestamp ts = Timestamp.valueOf(dateStr);
+		jobDate.setCreatedate(ts);
+		jobDateDAO.save(jobDate);
+	}
+	
 	
 	public JobDetail getJobDetailById(long id)
 	{
@@ -203,6 +242,15 @@ public class JobDetailService implements IJobDetailService {
 		return dates;
 	}
 	
+	public int getNumShort(long id)
+	{
+		JobDetail jobDetail = jobDetailDAO.findById(id);
+		List jobDates = jobDateDAO.findByProperty("jobDetail", jobDetail);
+		
+		int num = jobDetail.getNum() * jobDates.size();
+		return num;
+	}
+	
 	public int getRemainingShort(long id)
 	{
 		JobDetail jobDetail = jobDetailDAO.findById(id);
@@ -215,7 +263,12 @@ public class JobDetailService implements IJobDetailService {
 			List userJobs = userJobShortDAO.findByProperty("jobDate", jobDate);
 			num += userJobs.size();
 		}
-		return jobDetail.getNum() - num;
+		return this.getNumShort(id) - num;
+	}
+	
+	public void updateJob(JobDetail job)
+	{
+		jobDetailDAO.attachDirty(job);
 	}
 
 }

@@ -4,6 +4,7 @@ package dao;
 
 import java.util.List;
 
+import model.EnterpriseAccount;
 import model.JobDetail;
 
 import org.hibernate.LockMode;
@@ -47,6 +48,7 @@ public class JobDetailDAO extends HibernateDaoSupport implements IJobDetailDAO {
 		try {
 			getHibernateTemplate().save(transientInstance);
 			log.debug("save successful");
+			getHibernateTemplate().flush();
 		} catch (RuntimeException re) {
 			log.error("save failed", re);
 			throw re;
@@ -108,6 +110,23 @@ public class JobDetailDAO extends HibernateDaoSupport implements IJobDetailDAO {
 				i--;
 			}
 		}
+		return message;
+	}
+	
+	public List findByProperty(int page,int pageSize,long enterId) {
+
+		Session session = getHibernateTemplate().getSessionFactory()
+				.openSession();
+		EnterpriseAccount enter = new EnterpriseAccount();
+		enter.setEnterpriseid(enterId);
+		Query query = session.createQuery("from JobDetail where enterpriseAccount = ?");
+		query.setEntity(0, enter);
+		int startRow = (page - 1) * pageSize;
+		query.setFirstResult(startRow); 
+		query.setMaxResults(pageSize);
+		List message = query.list();
+		session.close();
+		
 		return message;
 	}
 
@@ -196,6 +215,7 @@ public class JobDetailDAO extends HibernateDaoSupport implements IJobDetailDAO {
 		try {
 			getHibernateTemplate().saveOrUpdate(instance);
 			log.debug("attach successful");
+			getHibernateTemplate().flush();
 		} catch (RuntimeException re) {
 			log.error("attach failed", re);
 			throw re;
@@ -222,4 +242,6 @@ public class JobDetailDAO extends HibernateDaoSupport implements IJobDetailDAO {
 	public static IJobDetailDAO getFromApplicationContext(ApplicationContext ctx) {
 		return (IJobDetailDAO) ctx.getBean("JobDetailDAO");
 	}
+
+	
 }

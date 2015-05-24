@@ -25,5 +25,9 @@ public interface IJobDetailDAO {
 	public abstract void attachClean(JobDetail instance);
 	
 	public abstract List findByProperty(int page,int pageSize,int sex,String type,long areaId,String keyword);
+	
+	public abstract List findByProperty(int page,int pageSize,long enterId);
+	
+	
 
 }

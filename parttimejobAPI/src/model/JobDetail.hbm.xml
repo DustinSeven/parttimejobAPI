@@ -8,7 +8,7 @@
     <class name="model.JobDetail" table="job_detail" catalog="part_time_job_db">
         <id name="jobid" type="java.lang.Long">
             <column name="jobid" />
-            <generator class="increment"></generator>
+            <generator class="identity"></generator>
         </id>
         <many-to-one name="payUnit" class="model.PayUnit" lazy="false" fetch="select">
             <column name="payunitid" />

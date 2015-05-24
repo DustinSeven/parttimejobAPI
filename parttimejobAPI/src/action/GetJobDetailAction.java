@@ -67,13 +67,16 @@ public class GetJobDetailAction {
 			DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 	        String dataStr = format.format(jobDetail.getDeadline());
 			map.put("stopdate", dataStr);
-			map.put("parttimejob_num", jobDetail.getNum());
+//			map.put("parttimejob_num", jobDetail.getNum());
 			map.put("sex", jobDetail.getSex());
 			map.put("height", jobDetail.getHeight());
 			map.put("health_certificate", jobDetail.getHealth());
 			map.put("interview", jobDetail.getInterview());
-			map.put("interview_address", jobDetail.getInterviewaddr());
-			map.put("interviewdate", jobDetail.getInterviewtime());
+			if(jobDetail.getInterview() != 0)
+			{
+				map.put("interview_address", jobDetail.getInterviewaddr());
+				map.put("interviewdate", jobDetail.getInterviewtime());
+			}
 			map.put("work_content", jobDetail.getJobContent());
 			map.put("remark", jobDetail.getRemark());
 			if(jobDetail.getWorktimetype() == 1)
@@ -82,6 +85,7 @@ public class GetJobDetailAction {
 				map.put("enroll", 0);
 				map.put("remaining",
 						jobDetailService.getRemainingLong(jobDetail.getJobid()));
+				map.put("parttimejob_num", jobDetail.getNum());
 			}
 			else
 			{
@@ -93,6 +97,7 @@ public class GetJobDetailAction {
 				
 				map.put("remaining",
 						jobDetailService.getRemainingShort(jobDetail.getJobid()));
+				map.put("parttimejob_num", jobDetailService.getNumShort(jobDetail.getJobid()));
 			}
 			map.put("type", jobDetail.getJobType().getName());
 			map.put("typecode", jobDetail.getJobType().getJobtypeid());

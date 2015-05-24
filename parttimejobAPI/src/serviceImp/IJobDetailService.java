@@ -2,6 +2,7 @@ package serviceImp;
 
 import java.util.List;
 
+import model.JobDate;
 import model.JobDetail;
 
 import org.hibernate.Session;
@@ -48,5 +49,15 @@ public interface IJobDetailService {
 	public abstract List getShortDate(long jobId,long userId);
 	
 	public abstract int getRemainingShort(long id);
+	
+	public abstract void saveJob(JobDetail job,long userId);
+	
+	public abstract void saveJobDate(JobDate jobDate);
+	
+	public abstract List getJobDetailList(int page,int pageSize,long enterId);
+	
+	public abstract int getNumShort(long id);
+	
+	public abstract void updateJob(JobDetail job);
 
 }

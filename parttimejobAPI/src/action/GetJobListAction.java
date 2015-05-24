@@ -105,27 +105,38 @@ public class GetJobListAction {
 			map.put("type", jobDetail.getJobType().getName());
 			map.put("typecode", jobDetail.getJobType().getJobtypeid());
 
-			long differ;
-			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddhhmmss");
-			String createStr = dateFormat.format(jobDetail.getCreatetime());
-			String nowStr = dateFormat.format(new Date());
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmm");
-			long createTime = 0;
-			long nowTime = 0;
-			try {
-				createTime = sdf.parse(createStr).getTime();
-				nowTime = sdf.parse(nowStr).getTime();
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			if(jobDetail.getCreatetime() != null)
+			{
+				long differ;
+				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddhhmmss");
+				String createStr = dateFormat.format(jobDetail.getCreatetime());
+				String nowStr = dateFormat.format(new Date());
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmm");
+				long createTime = 0;
+				long nowTime = 0;
+				try {
+					createTime = sdf.parse(createStr).getTime();
+					nowTime = sdf.parse(nowStr).getTime();
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				if(nowTime - createTime >= 259200000)
+					map.put("new", 0);
+				else
+					map.put("new", 1);
 			}
-			if(nowTime - createTime >= 259200000)
-				map.put("new", 0);
-			else
-				map.put("new", 1);
 
-			map.put("remaining",
-					jobDetailService.getRemainingLong(jobDetail.getJobid()));
+			if(jobDetail.getWorktimetype() == 1)
+			{
+				map.put("remaining",
+						jobDetailService.getRemainingLong(jobDetail.getJobid()));
+			}
+			else
+			{
+				map.put("remaining",
+						jobDetailService.getRemainingShort(jobDetail.getJobid()));
+			}
 			list.add(map);
 		}
 

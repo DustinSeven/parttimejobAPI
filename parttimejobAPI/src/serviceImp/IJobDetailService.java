@@ -59,5 +59,17 @@ public interface IJobDetailService {
 	public abstract int getNumShort(long id);
 	
 	public abstract void updateJob(JobDetail job);
+	
+	public abstract List getShortDate(long jobId);
+	
+	public abstract void updateJobDate(long jobDateId,int num);
+	
+	public abstract List getLongRegiUser(long jobId);
+	
+	public abstract List getShortRegiUser(long jobId);
+	
+	public abstract void deleteUserJobShort(long userJobId);
+	
+	public abstract void deleteUserJobLong(long userJobId);
 
 }

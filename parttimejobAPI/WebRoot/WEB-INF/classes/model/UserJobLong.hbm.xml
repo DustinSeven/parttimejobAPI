@@ -19,5 +19,8 @@
         <property name="createtime" type="java.sql.Timestamp">
             <column name="createtime" length="19" />
         </property>
+        <property name="signin" type="java.lang.Integer">
+            <column name="signin" />
+        </property>
     </class>
 </hibernate-mapping>

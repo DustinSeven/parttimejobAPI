@@ -1,0 +1,33 @@
+package action;
+
+import model.JobDetail;
+
+import org.apache.struts2.ServletActionContext;
+
+import serviceImp.IJobDetailService;
+import tool.ResultUtil;
+
+public class UpdateWorkerNumAction {
+
+	private String jobid;
+	private String num;
+	private IJobDetailService jobDetailService;
+	
+	
+	public String execute() {
+
+		JobDetail job = jobDetailService
+				.getJobDetailById(Long.parseLong(jobid));
+		if(job.getWorktimetype() == 1)
+		{
+			job.setNum(Integer.parseInt(num));
+		}
+		jobDetailService.updateJob(job);
+
+		ResultUtil.returnJsonWithCode200(ServletActionContext.getResponse(),
+				null, "ÐÞ¸Ä³É¹¦£¡");
+
+		return null;
+	}
+	
+}

@@ -11,6 +11,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
+import daoImp.IUserJobLongSigninDAO;
+
 /**
  	* A data access object (DAO) providing persistence and search support for UserJobLongSignin entities.
  			* Transaction control of the save(), update() and delete() operations 

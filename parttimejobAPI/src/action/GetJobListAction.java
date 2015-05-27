@@ -92,8 +92,10 @@ public class GetJobListAction {
 		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 		List jobs = jobDetailService.getJobDetailList(page,pagesize,psex,ptype,areaid,keyword);
 		for (int i = 0; i < jobs.size(); ++i) {
-			Map<String, Object> map = new HashMap<String, Object>();
 			JobDetail jobDetail = (JobDetail) jobs.get(i);
+			if(jobDetail.getEnable() == 0)
+				continue;
+			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("parttimeid", jobDetail.getJobid());
 			map.put("recruitment_tittle", jobDetail.getName());
 			map.put("amount", jobDetail.getPay());

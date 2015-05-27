@@ -54,6 +54,7 @@ public class UserJobShortDAO extends HibernateDaoSupport implements IUserJobShor
         try {
             getHibernateTemplate().delete(persistentInstance);
             log.debug("delete successful");
+            getHibernateTemplate().flush();
         } catch (RuntimeException re) {
             log.error("delete failed", re);
             throw re;
@@ -68,7 +69,7 @@ public class UserJobShortDAO extends HibernateDaoSupport implements IUserJobShor
         log.debug("getting UserJobShort instance with id: " + id);
         try {
             UserJobShort instance = (UserJobShort) getHibernateTemplate()
-                    .get("UserJobShort", id);
+                    .get("model.UserJobShort", id);
             return instance;
         } catch (RuntimeException re) {
             log.error("get failed", re);

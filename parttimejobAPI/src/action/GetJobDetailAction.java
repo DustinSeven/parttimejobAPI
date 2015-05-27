@@ -98,6 +98,7 @@ public class GetJobDetailAction {
 				map.put("remaining",
 						jobDetailService.getRemainingShort(jobDetail.getJobid()));
 				map.put("parttimejob_num", jobDetailService.getNumShort(jobDetail.getJobid()));
+				map.put("signum", jobDetail.getNum());
 			}
 			map.put("type", jobDetail.getJobType().getName());
 			map.put("typecode", jobDetail.getJobType().getJobtypeid());

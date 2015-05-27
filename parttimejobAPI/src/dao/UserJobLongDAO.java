@@ -54,6 +54,7 @@ public class UserJobLongDAO extends HibernateDaoSupport implements IUserJobLongD
         try {
             getHibernateTemplate().delete(persistentInstance);
             log.debug("delete successful");
+            getHibernateTemplate().flush();
         } catch (RuntimeException re) {
             log.error("delete failed", re);
             throw re;

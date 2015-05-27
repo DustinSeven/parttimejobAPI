@@ -16,11 +16,11 @@ import model.UserJobLong;
 import model.UserJobLongSignin;
 import model.UserJobShort;
 
-import dao.IUserJobLongSigninDAO;
 import daoImp.IJobDateDAO;
 import daoImp.IJobDetailDAO;
 import daoImp.IUserAccountDAO;
 import daoImp.IUserJobLongDAO;
+import daoImp.IUserJobLongSigninDAO;
 import daoImp.IUserJobShortDAO;
 
 public class MyRegistrationService implements IMyRegistrationService {

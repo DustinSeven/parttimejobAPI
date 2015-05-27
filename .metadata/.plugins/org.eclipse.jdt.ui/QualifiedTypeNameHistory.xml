@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="model.EnterpriseInfo"/>
-<fullyQualifiedTypeName name="serviceImp.IJobDetailService"/>
-<fullyQualifiedTypeName name="model.JobDetail"/>
 <fullyQualifiedTypeName name="daoImp.IPayUnitDAO"/>
 <fullyQualifiedTypeName name="daoImp.IJobTypeDAO"/>
 <fullyQualifiedTypeName name="daoImp.IPayCountTypeDAO"/>
@@ -11,6 +9,13 @@
 <fullyQualifiedTypeName name="serviceImp.IEnterpriseLoginService"/>
 <fullyQualifiedTypeName name="java.text.DateFormat"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="model.JobDate"/>
 <fullyQualifiedTypeName name="model.EnterpriseAccount"/>
+<fullyQualifiedTypeName name="model.JobDetail"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="model.JobDate"/>
+<fullyQualifiedTypeName name="daoImp.IUserJobLongSigninDAO"/>
+<fullyQualifiedTypeName name="serviceImp.IJobDetailService"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="model.UserAccount"/>
+<fullyQualifiedTypeName name="daoImp.IUserInfoDAO"/>
 </qualifiedTypeNameHistroy>

@@ -94,7 +94,7 @@ public class JobDetailDAO extends HibernateDaoSupport implements IJobDetailDAO {
 
 		Session session = getHibernateTemplate().getSessionFactory()
 				.openSession();
-		Query query = session.createQuery("from JobDetail");
+		Query query = session.createQuery("from JobDetail  order by createtime desc");
 		int startRow = (page - 1) * pageSize;
 		query.setFirstResult(startRow);
 		query.setMaxResults(pageSize);
@@ -119,7 +119,7 @@ public class JobDetailDAO extends HibernateDaoSupport implements IJobDetailDAO {
 				.openSession();
 		EnterpriseAccount enter = new EnterpriseAccount();
 		enter.setEnterpriseid(enterId);
-		Query query = session.createQuery("from JobDetail where enterpriseAccount = ?");
+		Query query = session.createQuery("from JobDetail where enterpriseAccount = ? order by createtime desc");
 		query.setEntity(0, enter);
 		int startRow = (page - 1) * pageSize;
 		query.setFirstResult(startRow); 

@@ -69,7 +69,7 @@ public class JobDateDAO extends HibernateDaoSupport implements IJobDateDAO  {
         log.debug("getting JobDate instance with id: " + id);
         try {
             JobDate instance = (JobDate) getHibernateTemplate()
-                    .get("JobDate", id);
+                    .get("model.JobDate", id);
             return instance;
         } catch (RuntimeException re) {
             log.error("get failed", re);
@@ -153,6 +153,7 @@ public class JobDateDAO extends HibernateDaoSupport implements IJobDateDAO  {
         try {
             getHibernateTemplate().saveOrUpdate(instance);
             log.debug("attach successful");
+            getHibernateTemplate().flush();
         } catch (RuntimeException re) {
             log.error("attach failed", re);
             throw re;

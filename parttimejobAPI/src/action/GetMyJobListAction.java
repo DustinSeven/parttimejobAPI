@@ -53,8 +53,12 @@ public class GetMyJobListAction {
 		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 		List jobs = jobDetailService.getJobDetailList(page,pagesize,Long.parseLong(enterid));
 		for (int i = 0; i < jobs.size(); ++i) {
-			Map<String, Object> map = new HashMap<String, Object>();
 			JobDetail jobDetail = (JobDetail) jobs.get(i);
+			if(jobDetail.getEnable() == 0)
+				continue;
+			
+			Map<String, Object> map = new HashMap<String, Object>();
+			map.put("jobid", String.valueOf(jobDetail.getJobid()));
 			map.put("parttimeid", String.valueOf(jobDetail.getJobid()));
 			map.put("title", jobDetail.getName());
 			map.put("logo", jobDetail.getImg());

@@ -1,0 +1,27 @@
+package action;
+
+import model.JobDetail;
+
+import org.apache.struts2.ServletActionContext;
+
+import serviceImp.IJobDetailService;
+import tool.ResultUtil;
+
+public class DisableJobAction {
+	
+	private String jobid;
+	private IJobDetailService jobDetailService;
+	
+	public String execute() {
+		
+		JobDetail job = jobDetailService.getJobDetailById(Long.parseLong(jobid));
+		job.setEnable(0);
+		jobDetailService.updateJob(job);
+		
+		ResultUtil.returnJsonWithCode200(
+				ServletActionContext.getResponse(), null, "ÃÜÂëÐÞ¸Ä³É¹¦£¡");
+		
+		return null;
+	}
+
+}

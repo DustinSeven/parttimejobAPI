@@ -30,7 +30,9 @@ import daoImp.IJobDetailDAO;
 import daoImp.IJobTypeDAO;
 import daoImp.IPayCountTypeDAO;
 import daoImp.IPayUnitDAO;
+import daoImp.IUserInfoDAO;
 import daoImp.IUserJobLongDAO;
+import daoImp.IUserJobLongSigninDAO;
 import daoImp.IUserJobShortDAO;
 
 public class JobDetailService implements IJobDetailService {
@@ -40,6 +42,8 @@ public class JobDetailService implements IJobDetailService {
 	private IEnterpriseInfoDAO enterpriseInfoDAO;
 	private IUserJobShortDAO userJobShortDAO;
 	private IJobDateDAO jobDateDAO;
+	private IUserJobLongSigninDAO userJobLongSigninDAO;
+	private IUserInfoDAO userInfoDAO;
 	
 //	private IPayUnitDAO payUnitDAO;
 //	private IJobTypeDAO jobTypeDAO;
@@ -47,8 +51,25 @@ public class JobDetailService implements IJobDetailService {
 //	private IEnterpriseAccountDAO enterpriseAccountDAO;
 //	private IAreaDAO areaDAO;
 	
+	
 	public IJobDateDAO getJobDateDAO() {
 		return jobDateDAO;
+	}
+
+	public IUserInfoDAO getUserInfoDAO() {
+		return userInfoDAO;
+	}
+
+	public void setUserInfoDAO(IUserInfoDAO userInfoDAO) {
+		this.userInfoDAO = userInfoDAO;
+	}
+
+	public IUserJobLongSigninDAO getUserJobLongSigninDAO() {
+		return userJobLongSigninDAO;
+	}
+
+	public void setUserJobLongSigninDAO(IUserJobLongSigninDAO userJobLongSigninDAO) {
+		this.userJobLongSigninDAO = userJobLongSigninDAO;
 	}
 
 	public void setJobDateDAO(IJobDateDAO jobDateDAO) {
@@ -242,6 +263,33 @@ public class JobDetailService implements IJobDetailService {
 		return dates;
 	}
 	
+	public List getShortDate(long jobId)
+	{
+		List dates = new ArrayList();
+		
+		JobDetail jobDetail = new JobDetail();
+		jobDetail.setJobid(jobId);
+		List jobDates = jobDateDAO.findByProperty("jobDetail", jobDetail);
+		for(int i=0;i<jobDates.size();++i)
+		{
+			JobDate jobDate = (JobDate)jobDates.get(i);
+			Map<String, Object> map = new HashMap<String, Object>();
+			
+			map.put("jobdateid",String.valueOf(jobDate.getJobdateid()));
+			DateFormat format = new SimpleDateFormat("MM月dd日");
+	        String dataStr = format.format(jobDate.getWorkdate());
+			map.put("workdate", dataStr);
+			
+			List userJobs = userJobShortDAO.findByProperty("jobDate", jobDate);
+			map.put("remaining", jobDate.getNum() - userJobs.size());
+			map.put("num", jobDate.getNum());
+
+			dates.add(map);
+		}
+		
+		return dates;
+	}
+	
 	public int getNumShort(long id)
 	{
 		JobDetail jobDetail = jobDetailDAO.findById(id);
@@ -270,5 +318,91 @@ public class JobDetailService implements IJobDetailService {
 	{
 		jobDetailDAO.attachDirty(job);
 	}
-
+	
+	public void updateJobDate(long jobDateId,int num)
+	{
+		JobDate jobDate = jobDateDAO.findById(jobDateId);
+		System.out.println(jobDate);
+		jobDate.setNum(num);
+		jobDateDAO.attachDirty(jobDate);
+	}
+	
+	public List getLongRegiUser(long jobId)
+	{
+		List list = new ArrayList();
+		JobDetail job = new JobDetail();
+		job.setJobid(jobId);
+		List jobList = userJobLongDAO.findByProperty("jobDetail", job);
+		for(int i=0;i<jobList.size();++i)
+		{
+			UserJobLong userJob = (UserJobLong) jobList.get(i);
+			
+			Map<String, Object> map = new HashMap<String, Object>();
+			map.put("name", userInfoDAO.findById(userJob.getUserAccount().getUserid()).getAccount());
+			map.put("mobile", userJob.getUserAccount().getMobile());
+			map.put("signin", userJob.getSignin());
+			map.put("school", userInfoDAO.findById(userJob.getUserAccount().getUserid()).getCollege().getName());
+			map.put("id", userJob.getUserAccount().getUserid());
+			map.put("img", userInfoDAO.findById(userJob.getUserAccount().getUserid()).getImg());
+			map.put("sex", userInfoDAO.findById(userJob.getUserAccount().getUserid()).getSex());
+			map.put("userjobid", String.valueOf(userJob.getId()));
+			
+			list.add(map);
+		}
+		
+		return list;
+	}
+	
+	public List getShortRegiUser(long jobId)
+	{
+		List list = new ArrayList();
+		JobDetail job = new JobDetail();
+		job.setJobid(jobId);
+		List jobDates = jobDateDAO.findByProperty("jobDetail", job);
+		for(int i=0;i<jobDates.size();++i)
+		{
+			JobDate date = (JobDate)jobDates.get(i);
+			List userJobs = userJobShortDAO.findByProperty("jobDate", date);
+			List userJobList = new ArrayList();
+			for(int j=0;j<userJobs.size();++j)
+			{
+				UserJobShort userJob = (UserJobShort)userJobs.get(j);
+				
+				Map<String, Object> map = new HashMap<String, Object>();
+				map.put("name", userInfoDAO.findById(userJob.getUserAccount().getUserid()).getAccount());
+				map.put("mobile", userJob.getUserAccount().getMobile());
+				map.put("signin", userJob.getSignin());
+				map.put("school", userInfoDAO.findById(userJob.getUserAccount().getUserid()).getCollege().getName());
+				map.put("id", userJob.getUserAccount().getUserid());
+				map.put("img", userInfoDAO.findById(userJob.getUserAccount().getUserid()).getImg());
+				map.put("sex", userInfoDAO.findById(userJob.getUserAccount().getUserid()).getSex());
+				map.put("userjobid", String.valueOf(userJob.getUserjobid()));
+				
+				userJobList.add(map);
+			}
+			
+			Map<String, Object> map = new HashMap<String, Object>();
+			DateFormat format = new SimpleDateFormat("MM月dd日");
+	        String dataStr = format.format(date.getWorkdate());
+			map.put("date", dataStr);
+			map.put("userjobs", userJobList);
+			list.add(map);
+		}
+		
+		return list;
+	}
+	
+	public void deleteUserJobLong(long userJobId)
+	{
+		UserJobLong userJob = userJobLongDAO.findById(userJobId);
+		if(userJob!=null)
+			userJobLongDAO.delete(userJob);
+	}
+	
+	public void deleteUserJobShort(long userJobId)
+	{
+		UserJobShort userJob = userJobShortDAO.findById(userJobId);
+		if(userJob!=null)
+			userJobShortDAO.delete(userJob);
+	}
 }

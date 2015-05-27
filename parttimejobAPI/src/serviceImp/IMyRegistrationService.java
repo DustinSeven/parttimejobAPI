@@ -2,11 +2,11 @@ package serviceImp;
 
 import java.util.List;
 
-import dao.IUserJobLongSigninDAO;
 import daoImp.IJobDateDAO;
 import daoImp.IJobDetailDAO;
 import daoImp.IUserAccountDAO;
 import daoImp.IUserJobLongDAO;
+import daoImp.IUserJobLongSigninDAO;
 import daoImp.IUserJobShortDAO;
 
 public interface IMyRegistrationService {

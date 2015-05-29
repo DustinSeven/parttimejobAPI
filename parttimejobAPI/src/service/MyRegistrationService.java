@@ -121,23 +121,19 @@ public class MyRegistrationService implements IMyRegistrationService {
 	
 	public List getMyRegistrationDetail(long userId,long jobId)
 	{
-		System.out.println("11111111");
 		List results = new ArrayList();
 		JobDetail jobDetail = jobDetailDAO.findById(jobId);
 		UserAccount user = userAccountDAO.findById(userId);
 		if(jobDetail.getWorktimetype() == 1)
 		{
-			System.out.println("22222222");
 			boolean isExist = false;
 			List userJobLongSignins = userJobLongSigninDAO.findByProperty("userAccount", user);
 			for(int i = 0;i<userJobLongSignins.size();++i)
 			{
-				System.out.println("333333");
 				UserJobLongSignin userJobLongSignin = (UserJobLongSignin)userJobLongSignins.get(i);
 				System.out.println(userJobLongSignin.getJobDetail().getJobid());
 				if(userJobLongSignin.getJobDetail().getJobid() == jobId)
 				{
-					System.out.println("444444");
 					Map<String , Object>map = new HashMap<String,Object>();
 					DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 			        String dataStr = format.format(userJobLongSignin.getCreatetime());
@@ -149,7 +145,6 @@ public class MyRegistrationService implements IMyRegistrationService {
 			}
 			if(!isExist)
 			{
-				System.out.println("555555");
 				Map<String , Object>map = new HashMap<String,Object>();
 				DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		        String dataStr = format.format(jobDetail.getDeadline());

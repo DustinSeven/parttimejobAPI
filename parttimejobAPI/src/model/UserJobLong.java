@@ -17,23 +17,11 @@ public class UserJobLong  implements java.io.Serializable {
      private JobDetail jobDetail;
      private UserAccount userAccount;
      private Timestamp createtime;
-     private int signin;
     // Constructors
 
 	/** default constructor */
     public UserJobLong() {
     }
-
-    
-    public int getSignin() {
-		return signin;
-	}
-
-
-	public void setSignin(int signin) {
-		this.signin = signin;
-	}
-
 
 	public JobDetail getJobDetail() {
 		return jobDetail;
@@ -46,11 +34,10 @@ public class UserJobLong  implements java.io.Serializable {
 
 
 	/** full constructor */
-    public UserJobLong(JobDetail jobDetail, UserAccount userAccount, Timestamp createtime ,int signin) {
+    public UserJobLong(JobDetail jobDetail, UserAccount userAccount, Timestamp createtime) {
         this.jobDetail = jobDetail;
         this.userAccount = userAccount;
         this.createtime = createtime;
-        this.signin = signin;
     }
 
    

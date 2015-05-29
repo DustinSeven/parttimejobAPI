@@ -11,6 +11,8 @@ public class DeleteUserJobAction {
 
 	private String userjobid;
 	private String jobid;
+	private IJobDetailService jobDetailService;
+
 	public String getJobid() {
 		return jobid;
 	}
@@ -19,9 +21,6 @@ public class DeleteUserJobAction {
 		this.jobid = jobid;
 	}
 
-	private IJobDetailService jobDetailService;
-
-	
 	public String getUserjobid() {
 		return userjobid;
 	}
@@ -42,7 +41,7 @@ public class DeleteUserJobAction {
 
 		JobDetail job = jobDetailService
 				.getJobDetailById(Long.parseLong(jobid));
-		if(job.getWorktimetype() == 1)
+		if (job.getWorktimetype() == 1)
 			jobDetailService.deleteUserJobLong(Long.parseLong(userjobid));
 		else
 			jobDetailService.deleteUserJobShort(Long.parseLong(userjobid));

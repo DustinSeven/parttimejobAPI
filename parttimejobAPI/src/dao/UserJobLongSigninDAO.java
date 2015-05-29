@@ -39,6 +39,7 @@ public class UserJobLongSigninDAO extends HibernateDaoSupport implements IUserJo
         try {
             getHibernateTemplate().save(transientInstance);
             log.debug("save successful");
+            getHibernateTemplate().flush();
         } catch (RuntimeException re) {
             log.error("save failed", re);
             throw re;

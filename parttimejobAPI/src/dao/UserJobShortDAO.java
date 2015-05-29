@@ -153,6 +153,7 @@ public class UserJobShortDAO extends HibernateDaoSupport implements IUserJobShor
         try {
             getHibernateTemplate().saveOrUpdate(instance);
             log.debug("attach successful");
+            getHibernateTemplate().flush();
         } catch (RuntimeException re) {
             log.error("attach failed", re);
             throw re;

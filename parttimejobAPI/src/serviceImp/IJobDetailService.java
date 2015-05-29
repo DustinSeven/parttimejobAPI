@@ -71,5 +71,9 @@ public interface IJobDetailService {
 	public abstract void deleteUserJobShort(long userJobId);
 	
 	public abstract void deleteUserJobLong(long userJobId);
+	
+	public abstract String signLong(long userId,long jobId);
+	
+	public abstract String signShort(long userId,long jobId);
 
 }

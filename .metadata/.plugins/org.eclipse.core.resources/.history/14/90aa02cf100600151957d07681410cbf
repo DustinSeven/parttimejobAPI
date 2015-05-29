@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="SignInAction" class="action.SignInAction" scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+	
+	<bean id="DeleteUserJobAction" class="action.DeleteUserJobAction" scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+	
+	<bean id="GetUserJobAction" class="action.GetUserJobAction" scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+
+	<bean id="GetMyShortJobDateAction" class="action.GetMyShortJobDateAction"
+		scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+
+	<bean id="UpdateWorkerNumAction" class="action.UpdateWorkerNumAction"
+		scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+
+	<bean id="UpdateJobAction" class="action.UpdateJobAction" scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+
+	<bean id="DisableJobAction" class="action.DisableJobAction" scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+
+	<bean id="UploadJobImgAction" class="action.UploadJobImgAction"
+		scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+
+	<bean id="GetMyJobListAction" class="action.GetMyJobListAction"
+		scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+
+	<bean id="ReleaseJobAction" class="action.ReleaseJobAction" scope="prototype">
+		<property name="enterpriseLoginService" ref="EnterpriseLoginService" />
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+
+	<bean id="UpdateEnterInfoAction" class="action.UpdateEnterInfoAction"
+		scope="prototype">
+		<property name="enterpriseLoginService" ref="EnterpriseLoginService" />
+	</bean>
+
+	<bean id="UploadEnterImgAction" class="action.UploadEnterImgAction"
+		scope="prototype">
+		<property name="enterpriseLoginService" ref="EnterpriseLoginService" />
+	</bean>
+
+	<bean id="EnterpriseChangePwdAction" class="action.EnterpriseChangePwdAction"
+		scope="prototype">
+		<property name="enterpriseLoginService" ref="EnterpriseLoginService" />
+	</bean>
+
+	<bean id="EnterpriseRegisterAction" class="action.EnterpriseRegisterAction"
+		scope="prototype">
+		<property name="enterpriseLoginService" ref="EnterpriseLoginService" />
+	</bean>
+
+	<bean id="GetEnterpriseInfoAction" class="action.GetEnterpriseInfoAction"
+		scope="prototype">
+		<property name="enterpriseLoginService" ref="EnterpriseLoginService" />
+	</bean>
+
+	<bean id="EnterpriseLoginService" class="service.EnterpriseLoginService"
+		scope="prototype">
+		<property name="enterpriseAccountDAO" ref="EnterpriseAccountDAO" />
+		<property name="enterpriseInfoDAO" ref="EnterpriseInfoDAO" />
+	</bean>
+	<bean id="EnterpriseLoginAction" class="action.EnterpriseLoginAction"
+		scope="prototype">
+		<property name="enterpriseLoginService" ref="EnterpriseLoginService" />
+	</bean>
+
+	<bean id="LoginService" class="service.LoginService" scope="prototype">
+		<property name="userAccountDAO" ref="UserAccountDAO" />
+		<property name="userInfoDAO" ref="UserInfoDAO" />
+		<property name="userSettingDAO" ref="UserSettingDAO" />
+	</bean>
+	<bean id="LoginAction" class="action.LoginAction" scope="prototype">
+		<property name="loginService" ref="LoginService" />
+	</bean>
+
+	<bean id="ChangePasswordAction" class="action.ChangePasswordAction"
+		scope="prototype">
+		<property name="loginService" ref="LoginService" />
+	</bean>
+
+	<bean id="RegisterAction" class="action.RegisterAction" scope="prototype">
+		<property name="loginService" ref="LoginService" />
+	</bean>
+
+	<bean id="UserInfoService" class="service.UserInfoService" scope="prototype">
+		<property name="userInfoDAO" ref="UserInfoDAO" />
+	</bean>
+	<bean id="GetUserInfoAction" class="action.GetUserInfoAction"
+		scope="prototype">
+		<property name="getUserInfoService" ref="UserInfoService" />
+		<property name="loginService" ref="LoginService" />
+	</bean>
+
+	<bean id="GetProvinceService" class="service.GetProvinceService"
+		scope="prototype">
+		<property name="provinceDAO" ref="ProvinceDAO" />
+	</bean>
+	<bean id="GetProvinceAction" class="action.GetProvinceAction"
+		scope="prototype">
+		<property name="getProvinceService" ref="GetProvinceService" />
+	</bean>
+
+	<bean id="GetCityService" class="service.GetCityService" scope="prototype">
+		<property name="cityDAO" ref="CityDAO" />
+	</bean>
+	<bean id="GetCityAction" class="action.GetCityAction" scope="prototype">
+		<property name="getCityService" ref="GetCityService" />
+	</bean>
+
+	<bean id="GetAreaService" class="service.GetAreaService" scope="prototype">
+		<property name="areaDAO" ref="AreaDAO" />
+	</bean>
+	<bean id="GetAreaAction" class="action.GetAreaAction" scope="prototype">
+		<property name="getAreaService" ref="GetAreaService" />
+	</bean>
+
+	<bean id="GetCollegeService" class="service.GetCollegeService"
+		scope="prototype">
+		<property name="collegeDAO" ref="CollegeDAO" />
+	</bean>
+	<bean id="GetAllCollegeAction" class="action.GetAllCollegeAction"
+		scope="prototype">
+		<property name="getCollegeService" ref="GetCollegeService" />
+	</bean>
+
+	<bean id="GetSchoolService" class="service.GetSchoolService"
+		scope="prototype">
+		<property name="schoolDAO" ref="SchoolDAO" />
+	</bean>
+	<bean id="GetAllSchoolAction" class="action.GetAllSchoolAction"
+		scope="prototype">
+		<property name="getSchoolService" ref="GetSchoolService" />
+	</bean>
+
+	<bean id="UploadUserImgAction" class="action.UploadUserImgAction"
+		scope="prototype">
+		<property name="userInfoService" ref="UserInfoService" />
+		<property name="loginService" ref="LoginService" />
+	</bean>
+
+	<bean id="UpdateUserInfoAction" class="action.UpdateUserInfoAction"
+		scope="prototype">
+		<property name="userInfoService" ref="UserInfoService" />
+		<property name="loginService" ref="LoginService" />
+	</bean>
+
+	<bean id="GetJobListAction" class="action.GetJobListAction" scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+	<bean id="JobDetailService" class="service.JobDetailService"
+		scope="prototype">
+		<property name="jobDetailDAO" ref="JobDetailDAO" />
+		<property name="userJobLongDAO" ref="UserJobLongDAO" />
+		<property name="userJobShortDAO" ref="UserJobShortDAO" />
+		<property name="enterpriseInfoDAO" ref="EnterpriseInfoDAO" />
+		<property name="jobDateDAO" ref="JobDateDAO" />
+		<property name="userJobLongSigninDAO" ref="UserJobLongSigninDAO" />
+		<property name="userInfoDAO" ref="UserInfoDAO" />
+		<!-- <property name="payUnitDAO" ref="PayUnitDAO" /> <property name="jobTypeDAO" 
+			ref="JobTypeDAO" /> <property name="payCountTypeDAO" ref="PayCountTypeDAO" 
+			/> <property name="enterpriseAccountDAO" ref="EnterpriseAccountDAO" /> <property 
+			name="areaDAO" ref="AreaDAO" /> -->
+
+	</bean>
+
+	<bean id="GetLongJobEnrollAction" class="action.GetLongJobEnrollAction"
+		scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+		<property name="loginService" ref="LoginService" />
+	</bean>
+
+	<bean id="GetJobDetailAction" class="action.GetJobDetailAction"
+		scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+
+	<bean id="GetAllJobTypeAction" class="action.GetAllJobTypeAction"
+		scope="prototype">
+		<property name="jobTypeService" ref="JobTypeService" />
+	</bean>
+	<bean id="JobTypeService" class="service.JobTypeService" scope="prototype">
+		<property name="jobTypeDAO" ref="JobTypeDAO" />
+	</bean>
+
+	<bean id="GetSchoolmateAction" class="action.GetSchoolmateAction"
+		scope="prototype">
+		<property name="schoolmateService" ref="SchoolmateService" />
+	</bean>
+	<bean id="SchoolmateService" class="service.SchoolmateService"
+		scope="prototype">
+		<property name="userJobLongDAO" ref="UserJobLongDAO" />
+		<property name="userInfoDAO" ref="UserInfoDAO" />
+		<property name="userSettingDAO" ref="UserSettingDAO" />
+		<property name="jobDetailDAO" ref="JobDetailDAO" />
+		<property name="userJobShortDAO" ref="UserJobShortDAO" />
+		<property name="jobDateDAO" ref="JobDateDAO" />
+	</bean>
+	<bean id="GetShortDateAction" class="action.GetShortDateAction"
+		scope="prototype">
+		<property name="jobDetailService" ref="JobDetailService" />
+	</bean>
+
+	<bean id="RegistrationLongAction" class="action.RegistrationLongAction"
+		scope="prototype">
+		<property name="registrationService" ref="RegistrationService" />
+		<property name="loginService" ref="LoginService" />
+	</bean>
+	<bean id="RegistrationShortAction" class="action.RegistrationShortAction"
+		scope="prototype">
+		<property name="registrationService" ref="RegistrationService" />
+		<property name="loginService" ref="LoginService" />
+	</bean>
+	<bean id="RegistrationService" class="service.RegistrationService"
+		scope="prototype">
+		<property name="userJobLongDAO" ref="UserJobLongDAO" />
+		<property name="userJobShortDAO" ref="UserJobShortDAO" />
+		<property name="userAccountDAO" ref="UserAccountDAO" />
+		<property name="jobDetailDAO" ref="JobDetailDAO" />
+		<property name="jobDateDAO" ref="JobDateDAO" />
+	</bean>
+
+	<bean id="GetUserSettingAction" class="action.GetUserSettingAction"
+		scope="prototype">
+		<property name="userSettingService" ref="UserSettingService" />
+		<property name="loginService" ref="LoginService" />
+	</bean>
+	<bean id="SetUserSettingAction" class="action.SetUserSettingAction"
+		scope="prototype">
+		<property name="userSettingService" ref="UserSettingService" />
+		<property name="loginService" ref="LoginService" />
+	</bean>
+	<bean id="UserSettingService" class="service.UserSettingService"
+		scope="prototype">
+		<property name="userSettingDAO" ref="UserSettingDAO" />
+	</bean>
+
+	<bean id="GetMyRegistrationAction" class="action.GetMyRegistrationAction"
+		scope="prototype">
+		<property name="myRegistrationService" ref="MyRegistrationService" />
+		<property name="loginService" ref="LoginService" />
+	</bean>
+	<bean id="MyRegistrationService" class="service.MyRegistrationService"
+		scope="prototype">
+		<property name="userJobLongDAO" ref="UserJobLongDAO" />
+		<property name="userJobShortDAO" ref="UserJobShortDAO" />
+		<property name="jobDetailDAO" ref="JobDetailDAO" />
+		<property name="jobDateDAO" ref="JobDateDAO" />
+		<property name="userAccountDAO" ref="UserAccountDAO" />
+		<property name="userJobLongSigninDAO" ref="UserJobLongSigninDAO" />
+	</bean>
+
+	<bean id="GetMyRegistrationDetailAction" class="action.GetMyRegistrationDetailAction"
+		scope="prototype">
+		<property name="myRegistrationService" ref="MyRegistrationService" />
+		<property name="loginService" ref="LoginService" />
+	</bean>
+
+	<bean id="AdviceAction" class="action.AdviceAction" scope="prototype">
+		<property name="adviceService" ref="AdviceService" />
+	</bean>
+	<bean id="AdviceService" class="service.AdviceService" scope="prototype">
+		<property name="adviceDAO" ref="AdviceDAO" />
+		<property name="userAccountDAO" ref="UserAccountDAO" />
+	</bean>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/?characterEncoding=utf-8">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>model/UserAccount.hbm.xml</value>
+				<value>model/UserInfo.hbm.xml</value>
+				<value>model/Province.hbm.xml</value>
+				<value>model/City.hbm.xml</value>
+				<value>model/Area.hbm.xml</value>
+				<value>model/College.hbm.xml</value>
+				<value>model/School.hbm.xml</value>
+				<value>model/JobType.hbm.xml</value>
+				<value>model/JobDetail.hbm.xml</value>
+				<value>model/PayCountType.hbm.xml</value>
+				<value>model/PayUnit.hbm.xml</value>
+				<value>model/UserJobLong.hbm.xml</value>
+				<value>model/UserSetting.hbm.xml</value>
+				<value>model/EnterpriseInfo.hbm.xml</value>
+				<value>model/EnterpriseAccount.hbm.xml</value>
+				<value>model/UserJobShort.hbm.xml</value>
+				<value>model/JobDate.hbm.xml</value>
+				<value>model/Advice.hbm.xml</value>
+				<value>model/UserJobLongSignin.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="UserAccountDAO" class="dao.UserAccountDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UserInfoDAO" class="dao.UserInfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ProvinceDAO" class="dao.ProvinceDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CityDAO" class="dao.CityDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="AreaDAO" class="dao.AreaDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CollegeDAO" class="dao.CollegeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SchoolDAO" class="dao.SchoolDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="JobTypeDAO" class="dao.JobTypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="JobDetailDAO" class="dao.JobDetailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="PayCountTypeDAO" class="dao.PayCountTypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="PayUnitDAO" class="dao.PayUnitDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UserJobLongDAO" class="dao.UserJobLongDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UserSettingDAO" class="dao.UserSettingDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="EnterpriseInfoDAO" class="dao.EnterpriseInfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="EnterpriseAccountDAO" class="dao.EnterpriseAccountDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UserJobShortDAO" class="dao.UserJobShortDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="JobDateDAO" class="dao.JobDateDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="AdviceDAO" class="dao.AdviceDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UserJobLongSigninDAO" class="dao.UserJobLongSigninDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+</beans>

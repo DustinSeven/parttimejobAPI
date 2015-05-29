@@ -20,6 +20,7 @@ import model.JobDate;
 import model.JobDetail;
 import model.UserAccount;
 import model.UserJobLong;
+import model.UserJobLongSignin;
 import model.UserJobShort;
 
 import daoImp.IAreaDAO;
@@ -340,7 +341,29 @@ public class JobDetailService implements IJobDetailService {
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("name", userInfoDAO.findById(userJob.getUserAccount().getUserid()).getAccount());
 			map.put("mobile", userJob.getUserAccount().getMobile());
-			map.put("signin", userJob.getSignin());
+//			map.put("signin", userJob.getSignin());
+			UserJobLongSignin sign = new UserJobLongSignin();
+			sign.setJobDetail(job);
+			sign.setUserAccount(userJob.getUserAccount());
+			List signLong = userJobLongSigninDAO.findByExample(sign);
+			boolean isSign = false;
+			if(signLong.size() != 0)
+			{
+				for(int j=0;j<signLong.size();++j)
+				{
+					
+					UserJobLongSignin tmpS = (UserJobLongSignin) signLong.get(j);
+					SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");//设置日期格式
+					if(df.format(new Date()).endsWith(df.format(tmpS.getCreatetime())))
+					{
+						map.put("signin", 1);
+						isSign = true;
+						break;
+					}
+				}
+			}
+			if(!isSign)
+				map.put("signin", 0);
 			map.put("school", userInfoDAO.findById(userJob.getUserAccount().getUserid()).getCollege().getName());
 			map.put("id", userJob.getUserAccount().getUserid());
 			map.put("img", userInfoDAO.findById(userJob.getUserAccount().getUserid()).getImg());
@@ -404,5 +427,101 @@ public class JobDetailService implements IJobDetailService {
 		UserJobShort userJob = userJobShortDAO.findById(userJobId);
 		if(userJob!=null)
 			userJobShortDAO.delete(userJob);
+	}
+	
+	public String signLong(long userId,long jobId)
+	{
+		UserJobLong userJob = new UserJobLong();
+		UserJobLongSignin sign = new UserJobLongSignin();
+		
+		JobDetail job = new JobDetail();
+		job.setJobid(jobId);
+		sign.setJobDetail(job);
+		userJob.setJobDetail(job);
+		
+		UserAccount user = new UserAccount();
+		user.setUserid(userId);
+		sign.setUserAccount(user);
+		userJob.setUserAccount(user);
+		
+		List userJobs = userJobLongDAO.findByExample(userJob);
+		boolean isJoin = false;
+		for(int i=0;i<userJobs.size();++i)
+		{
+			UserJobLong ujl = (UserJobLong)userJobs.get(i);
+			if(ujl.getJobDetail().getJobid() == jobId && ujl.getUserAccount().getUserid() == userId)
+			{
+				isJoin = true;
+				break;
+			}
+		}
+		if(!isJoin)
+			return "nouserjob";
+		
+		List signLong = userJobLongSigninDAO.findByExample(sign);
+		boolean isSign = false;
+		if(signLong.size() != 0)
+		{
+			for(int j=0;j<signLong.size();++j)
+			{
+				UserJobLongSignin tmpS = (UserJobLongSignin) signLong.get(j);
+				if(tmpS.getJobDetail().getJobid() == jobId && tmpS.getUserAccount().getUserid() == userId)
+				{
+					SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");//设置日期格式
+					System.out.println(df.format(tmpS.getCreatetime()));
+					if(df.format(new Date()).endsWith(df.format(tmpS.getCreatetime())))
+					{
+						isSign = true;
+						break;
+					}
+				}
+			}
+		}
+		if(isSign)
+			return "already";
+		
+		Date date = new Date();
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String dateStr = f.format(date);
+		Timestamp ts = Timestamp.valueOf(dateStr);
+		sign.setCreatetime(ts);
+		
+		userJobLongSigninDAO.save(sign);
+		
+		return "success";
+	}
+	
+	public String signShort(long userId,long jobId)
+	{
+		UserJobShort userJob = new UserJobShort();
+		
+		UserAccount user = new UserAccount();
+		user.setUserid(userId);
+		userJob.setUserAccount(user);
+		
+		List userJobs = userJobShortDAO.findByProperty("userAccount", user);
+		boolean isJoin = false;
+		for(int i=0;i<userJobs.size();++i)
+		{
+			UserJobShort tmpUJ = (UserJobShort) userJobs.get(i);
+			SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");//设置日期格式
+			String dateStr = df.format(new Date());
+			if(tmpUJ.getJobDate().getJobDetail().getJobid() == jobId && dateStr.endsWith(df.format(tmpUJ.getJobDate().getWorkdate())))
+			{
+				isJoin = true;
+				if(tmpUJ.getSignin() == 1)
+					return "already";
+				else
+				{
+					tmpUJ.setSignin(1);
+					userJobShortDAO.attachDirty(tmpUJ);
+					return "success";
+				}
+			}
+		}
+		
+		if(!isJoin)
+			return "nouserjob";
+		return "fail";
 	}
 }

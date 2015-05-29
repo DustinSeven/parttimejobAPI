@@ -18,4 +18,5 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="model.UserAccount"/>
 <fullyQualifiedTypeName name="daoImp.IUserInfoDAO"/>
+<fullyQualifiedTypeName name="model.UserJobLongSignin"/>
 </qualifiedTypeNameHistroy>

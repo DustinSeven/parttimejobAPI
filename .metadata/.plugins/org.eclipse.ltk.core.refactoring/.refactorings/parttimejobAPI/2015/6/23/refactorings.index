@@ -1,0 +1,17 @@
+1433176983651	Move compilation unit
+1433176992790	Move file
+1433177020776	Delete element
+1433177031792	Delete element
+1433177239423	Delete elements
+1433177245768	Delete element
+1433177336380	Delete element
+1433177342177	Delete element
+1433177440559	Delete element
+1433177447747	Delete element
+1433177500885	Move compilation unit
+1433177514893	Move compilation unit
+1433177524659	Move file
+1433177550791	Extract interface 'ITSessionDAO'
+1433177556683	Move compilation unit
+1433178558585	Extract interface 'ISessionService'
+1433178565190	Move compilation unit

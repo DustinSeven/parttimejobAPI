@@ -102,8 +102,18 @@
 			<generator class="identity"></generator>
 		</primary-key>
 	</table>
-<table name="user_job_long_signin" catalog="part_time_job_db"
-	class="UserJobLongSignin">
+	<table name="user_job_long_signin" catalog="part_time_job_db"
+		class="UserJobLongSignin">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="session" catalog="part_time_job_db" class="Session">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+<table name="t_session" catalog="part_time_job_db" class="TSession">
 	<primary-key>
 		<generator class="identity"></generator>
 	</primary-key>

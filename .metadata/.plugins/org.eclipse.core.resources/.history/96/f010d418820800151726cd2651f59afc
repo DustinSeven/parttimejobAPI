@@ -1,0 +1,53 @@
+package action;
+
+import serviceImp.ISessionService;
+
+public class SessionAction {
+
+	private String entermobile;
+	private String usermobile;
+	private String text;
+	private String isfromenter;
+	private ISessionService sessionService;
+
+	public String getEntermobile() {
+		return entermobile;
+	}
+
+	public void setEntermobile(String entermobile) {
+		this.entermobile = entermobile;
+	}
+
+	public String getUsermobile() {
+		return usermobile;
+	}
+
+	public void setUsermobile(String usermobile) {
+		this.usermobile = usermobile;
+	}
+
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public String getIsfromenter() {
+		return isfromenter;
+	}
+
+	public void setIsfromenter(String isfromenter) {
+		this.isfromenter = isfromenter;
+	}
+
+	public ISessionService getSessionService() {
+		return sessionService;
+	}
+
+	public void setSessionService(ISessionService sessionService) {
+		this.sessionService = sessionService;
+	}
+
+}

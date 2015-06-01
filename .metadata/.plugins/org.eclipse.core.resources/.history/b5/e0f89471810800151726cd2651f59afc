@@ -1,0 +1,9 @@
+package action;
+
+public class SessionAction {
+	
+	private String frommobile;
+	private String tomobile;
+	private String text;
+
+}

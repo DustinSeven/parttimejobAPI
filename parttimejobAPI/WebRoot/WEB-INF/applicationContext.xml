@@ -3,15 +3,28 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+	<bean id="SessionAction" class="action.SessionAction" scope="prototype">
+		<property name="sessionService" ref="SessionService" />
+	</bean>
+
+	<bean id="SessionService" class="service.SessionService" scope="prototype">
+		<property name="sessionDAO" ref="TSessionDAO" />
+		<property name="userAccountDAO" ref="UserAccountDAO" />
+		<property name="userInfoDAO" ref="UserInfoDAO" />
+		<property name="enterpriseInfoDAO" ref="EnterpriseInfoDAO" />
+		<property name="enterpriseAccountDAO" ref="EnterpriseAccountDAO" />
+	</bean>
+
 	<bean id="SignInAction" class="action.SignInAction" scope="prototype">
 		<property name="jobDetailService" ref="JobDetailService" />
 		<property name="loginService" ref="LoginService" />
 	</bean>
-	
-	<bean id="DeleteUserJobAction" class="action.DeleteUserJobAction" scope="prototype">
+
+	<bean id="DeleteUserJobAction" class="action.DeleteUserJobAction"
+		scope="prototype">
 		<property name="jobDetailService" ref="JobDetailService" />
 	</bean>
-	
+
 	<bean id="GetUserJobAction" class="action.GetUserJobAction" scope="prototype">
 		<property name="jobDetailService" ref="JobDetailService" />
 	</bean>
@@ -325,6 +338,7 @@
 				<value>model/JobDate.hbm.xml</value>
 				<value>model/Advice.hbm.xml</value>
 				<value>model/UserJobLongSignin.hbm.xml</value>
+				<value>model/TSession.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -419,6 +433,11 @@
 		</property>
 	</bean>
 	<bean id="UserJobLongSigninDAO" class="dao.UserJobLongSigninDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="TSessionDAO" class="dao.TSessionDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>

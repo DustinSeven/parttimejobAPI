@@ -1,0 +1,84 @@
+package action;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import model.TSession;
+
+import org.apache.struts2.ServletActionContext;
+
+import serviceImp.ISessionService;
+import tool.ResultUtil;
+
+public class SessionAction {
+
+	private String entermobile;
+	private String usermobile;
+	private String text;
+	private String isfromenter;
+	private ISessionService sessionService;
+
+	public String getEntermobile() {
+		return entermobile;
+	}
+
+	public void setEntermobile(String entermobile) {
+		this.entermobile = entermobile;
+	}
+
+	public String getUsermobile() {
+		return usermobile;
+	}
+
+	public void setUsermobile(String usermobile) {
+		this.usermobile = usermobile;
+	}
+
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public String getIsfromenter() {
+		return isfromenter;
+	}
+
+	public void setIsfromenter(String isfromenter) {
+		this.isfromenter = isfromenter;
+	}
+
+	public ISessionService getSessionService() {
+		return sessionService;
+	}
+
+	public void setSessionService(ISessionService sessionService) {
+		this.sessionService = sessionService;
+	}
+
+	public String execute() {
+
+		TSession session = new TSession();
+		session.setEntermobile(entermobile);
+		session.setUsermobile(usermobile);
+		session.setText(text);
+		if(isfromenter.endsWith("0"))
+			session.setIsfromenter(0);
+		else 
+			session.setIsfromenter(1);
+		
+		HashMap<String,Object>map = sessionService.saveSession(session);
+		
+		List list = new ArrayList();
+		list.add(map);
+
+		ResultUtil.returnJsonWithCode200(
+				ServletActionContext.getResponse(), null, "获取成功!");
+
+		return null;
+	}
+
+}

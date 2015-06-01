@@ -1,5 +1,21 @@
 <Beans>
     <Bean Class="com.genuitec.eclipse.sqlexplorer.utils.ConnectionProfile">
+        <activate>true</activate>
+        <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>4e1e8adf:14da97cb78a:-7f6e</string>
+        </driverIdentifier>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>4e1e8adf:14da97cb78a:-7f91</string>
+        </identifier>
+        <name>part_time_job_db</name>
+        <password encryption="true">U6gh0GaqlQc=</password>
+        <promptForPassword>false</promptForPassword>
+        <schema Indexed="true"/>
+        <schemaDisplayPolicy>0</schemaDisplayPolicy>
+        <url>jdbc:mysql://localhost:3306/part_time_job_db</url>
+        <userName>root</userName>
+    </Bean>
+    <Bean Class="com.genuitec.eclipse.sqlexplorer.utils.ConnectionProfile">
         <activate>false</activate>
         <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
             <string>-242b784e:14d65490805:-7fde</string>

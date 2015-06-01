@@ -1,0 +1,47 @@
+package service;
+
+import java.util.HashMap;
+
+import model.TSession;
+
+import daoImp.IEnterpriseAccountDAO;
+import daoImp.IEnterpriseInfoDAO;
+import daoImp.ITSessionDAO;
+import daoImp.IUserAccountDAO;
+
+public class SessionService {
+	
+	private ITSessionDAO sessionDAO;
+	private IUserAccountDAO userAccountDAO;
+	private IUserInfoDAO userInfoDAO;
+	private IEnterpriseInfoDAO enterpriseInfoDAO;
+	private IEnterpriseAccountDAO enterpriseAccountDAO;
+	public ITSessionDAO getSessionDAO() {
+		return sessionDAO;
+	}
+	public void setSessionDAO(ITSessionDAO sessionDAO) {
+		this.sessionDAO = sessionDAO;
+	}
+	public IUserAccountDAO getUserAccountDAO() {
+		return userAccountDAO;
+	}
+	public void setUserAccountDAO(IUserAccountDAO userAccountDAO) {
+		this.userAccountDAO = userAccountDAO;
+	}
+	public IEnterpriseInfoDAO getEnterpriseInfoDAO() {
+		return enterpriseInfoDAO;
+	}
+	public void setEnterpriseInfoDAO(IEnterpriseInfoDAO enterpriseInfoDAO) {
+		this.enterpriseInfoDAO = enterpriseInfoDAO;
+	}
+	
+	public HashMap<String,Object> saveSession(TSession session)
+	{
+		HashMap<String,Object> map = new HashMap<String,Object>();
+		sessionDAO.save(session);
+		userAccountDAO.findByProperty("mobile", value)
+		
+		return map;
+	}
+
+}

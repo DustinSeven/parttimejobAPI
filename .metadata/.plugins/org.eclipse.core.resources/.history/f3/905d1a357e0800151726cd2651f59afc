@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="user_account" catalog="part_time_job_db"
+		class="UserAccount">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="user_info" catalog="part_time_job_db"
+		class="UserInfo">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="province" catalog="part_time_job_db"
+		class="Province">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="city" catalog="part_time_job_db" class="City">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="area" catalog="part_time_job_db" class="Area">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="college" catalog="part_time_job_db" class="College">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="school" catalog="part_time_job_db" class="School">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="job_detail" catalog="part_time_job_db"
+		class="JobDetail">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="job_type" catalog="part_time_job_db" class="JobType">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="pay_count_type" catalog="part_time_job_db"
+		class="PayCountType">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="pay_unit" catalog="part_time_job_db" class="PayUnit">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="user_job_long" catalog="part_time_job_db"
+		class="UserJobLong">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="user_setting" catalog="part_time_job_db"
+		class="UserSetting">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="enterprise_account" catalog="part_time_job_db"
+		class="EnterpriseAccount">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="enterprise_info" catalog="part_time_job_db"
+		class="EnterpriseInfo">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="job_date" catalog="part_time_job_db" class="JobDate">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="user_job_short" catalog="part_time_job_db"
+		class="UserJobShort">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="advice" catalog="part_time_job_db" class="Advice">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="user_job_long_signin" catalog="part_time_job_db"
+		class="UserJobLongSignin">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+<table name="session" catalog="part_time_job_db" class="Session">
+	<primary-key>
+		<generator class="identity"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

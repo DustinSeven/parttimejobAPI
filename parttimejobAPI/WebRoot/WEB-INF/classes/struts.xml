@@ -3,9 +3,12 @@
 <struts>
 	<package name="strutsBean" extends="struts-default" namespace="/">
 
+		<action name="session" class="SessionAction">
+		</action>
+
 		<action name="signin" class="SignInAction">
 		</action>
-		
+
 		<action name="deleteuserjob" class="DeleteUserJobAction">
 		</action>
 

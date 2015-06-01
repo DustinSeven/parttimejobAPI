@@ -1,0 +1,23 @@
+// default package
+
+import java.sql.Timestamp;
+
+
+/**
+ * Session entity. @author MyEclipse Persistence Tools
+ */
+public class Session extends AbstractSession implements java.io.Serializable {
+
+    // Constructors
+
+    /** default constructor */
+    public Session() {
+    }
+
+    
+    /** full constructor */
+    public Session(String entermobile, String usermobile, String text, Timestamp createtime, Integer isfromenter) {
+        super(entermobile, usermobile, text, createtime, isfromenter);        
+    }
+   
+}

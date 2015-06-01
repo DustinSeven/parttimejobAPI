@@ -1,0 +1,38 @@
+package service;
+
+import java.util.HashMap;
+
+import model.TSession;
+import daoImp.IEnterpriseAccountDAO;
+import daoImp.IEnterpriseInfoDAO;
+import daoImp.ITSessionDAO;
+import daoImp.IUserAccountDAO;
+import daoImp.IUserInfoDAO;
+
+public interface ISessionService {
+
+	public abstract IUserInfoDAO getUserInfoDAO();
+
+	public abstract void setUserInfoDAO(IUserInfoDAO userInfoDAO);
+
+	public abstract IEnterpriseAccountDAO getEnterpriseAccountDAO();
+
+	public abstract void setEnterpriseAccountDAO(
+			IEnterpriseAccountDAO enterpriseAccountDAO);
+
+	public abstract ITSessionDAO getSessionDAO();
+
+	public abstract void setSessionDAO(ITSessionDAO sessionDAO);
+
+	public abstract IUserAccountDAO getUserAccountDAO();
+
+	public abstract void setUserAccountDAO(IUserAccountDAO userAccountDAO);
+
+	public abstract IEnterpriseInfoDAO getEnterpriseInfoDAO();
+
+	public abstract void setEnterpriseInfoDAO(
+			IEnterpriseInfoDAO enterpriseInfoDAO);
+
+	public abstract HashMap<String, Object> saveSession(TSession session);
+
+}

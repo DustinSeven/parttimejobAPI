@@ -60,7 +60,7 @@ public class RegisterAction {
 		if(isSuccess != true)
 			ResultUtil.returnJsonWithCode500(ServletActionContext.getResponse(), null,"账户已存在！");
 		else 
-			ResultUtil.returnJsonWithCode500(ServletActionContext.getResponse(), null,"注册成功！");
+			ResultUtil.returnJsonWithCode200(ServletActionContext.getResponse(), null,"注册成功！");
 		
 		return null;
 	}

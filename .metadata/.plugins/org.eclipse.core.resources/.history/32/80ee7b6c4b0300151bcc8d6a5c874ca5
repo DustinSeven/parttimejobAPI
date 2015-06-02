@@ -1,8 +1,0 @@
-package action;
-
-public class GetMyShortJobDateAction {
-	
-	private String jobid;
-	
-
-}

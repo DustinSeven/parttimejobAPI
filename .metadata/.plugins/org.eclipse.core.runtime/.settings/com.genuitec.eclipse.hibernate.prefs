@@ -1,8 +1,7 @@
-#Tue Jun 02 00:38:59 CST 2015
+#Tue Jun 02 19:10:07 CST 2015
 com.genuitec.eclipse.hibernate.JAVA_PACKAGE=model
-com.genuitec.eclipse.hibernate.GEN_POJO=false
 me.pref.version=4.1
 eclipse.preferences.version=1
 com.genuitec.eclipse.hibernate.GEN_DAO=true
-com.genuitec.eclipse.hibernate.GEN_MAPPING=false
+com.genuitec.eclipse.hibernate.GEN_ABSTRACT=false
 com.genuitec.eclipse.hibernate.JAVA_FOLDER=/parttimejobAPI/src

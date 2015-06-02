@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="model.EnterpriseInfo"/>
 <fullyQualifiedTypeName name="daoImp.IPayUnitDAO"/>
 <fullyQualifiedTypeName name="daoImp.IJobTypeDAO"/>
 <fullyQualifiedTypeName name="daoImp.IPayCountTypeDAO"/>
-<fullyQualifiedTypeName name="daoImp.IEnterpriseAccountDAO"/>
 <fullyQualifiedTypeName name="daoImp.IAreaDAO"/>
 <fullyQualifiedTypeName name="serviceImp.IEnterpriseLoginService"/>
 <fullyQualifiedTypeName name="java.text.DateFormat"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="model.EnterpriseAccount"/>
 <fullyQualifiedTypeName name="model.JobDetail"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="model.JobDate"/>
 <fullyQualifiedTypeName name="daoImp.IUserJobLongSigninDAO"/>
 <fullyQualifiedTypeName name="serviceImp.IJobDetailService"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="model.UserAccount"/>
-<fullyQualifiedTypeName name="daoImp.IUserInfoDAO"/>
 <fullyQualifiedTypeName name="model.UserJobLongSignin"/>
+<fullyQualifiedTypeName name="daoImp.ITSessionDAO"/>
+<fullyQualifiedTypeName name="daoImp.IUserAccountDAO"/>
+<fullyQualifiedTypeName name="daoImp.IEnterpriseInfoDAO"/>
+<fullyQualifiedTypeName name="daoImp.IEnterpriseAccountDAO"/>
+<fullyQualifiedTypeName name="daoImp.IUserInfoDAO"/>
+<fullyQualifiedTypeName name="model.UserAccount"/>
+<fullyQualifiedTypeName name="model.UserInfo"/>
+<fullyQualifiedTypeName name="model.EnterpriseAccount"/>
+<fullyQualifiedTypeName name="model.EnterpriseInfo"/>
+<fullyQualifiedTypeName name="serviceImp.ISessionService"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="model.TSession"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

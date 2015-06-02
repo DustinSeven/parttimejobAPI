@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="45" version="2.0">
+<workbench progressCount="69" version="2.0">
 <workbenchAdvisor/>
-<window height="825" maximized="true" width="1440" x="17" y="23">
+<window height="832" maximized="true" width="1440" x="-42" y="23">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -18,7 +18,7 @@
 <coolItem id="com.genuitec.myeclipse.actions.desktop" itemType="typeToolBarContribution" x="54" y="22"/>
 <coolItem id="com.genuitec.myeclipse.actions.reporting" itemType="typeToolBarContribution" x="62" y="22"/>
 <coolItem id="com.genuitec.myeclipse.actions.screencapture" itemType="typeToolBarContribution" x="40" y="22"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="100" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="130" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="84" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="98" y="22"/>
@@ -36,7 +36,7 @@
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1431923394023" focus="true" label="Workspace - MyEclipse Database Explorer">
+<page aggregateWorkingSetId="Aggregate for window 1431923394023" focus="true" label="Workspace - MyEclipse Java Enterprise">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -54,35 +54,35 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DeleteUserJobAction.java" partName="DeleteUserJobAction.java" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/action/DeleteUserJobAction.java" title="DeleteUserJobAction.java" tooltip="parttimejobAPI/src/action/DeleteUserJobAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/action/DeleteUserJobAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="396" selectionOffset="734" selectionTopPixel="226"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SignInAction.java" partName="SignInAction.java" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/action/SignInAction.java" title="SignInAction.java" tooltip="parttimejobAPI/src/action/SignInAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/action/SignInAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="417" selectionTopPixel="1064"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JobDetailService.java" partName="JobDetailService.java" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/service/JobDetailService.java" title="JobDetailService.java" tooltip="parttimejobAPI/src/service/JobDetailService.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/service/JobDetailService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13726" selectionTopPixel="5888"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IJobDetailService.java" partName="IJobDetailService.java" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/serviceImp/IJobDetailService.java" title="IJobDetailService.java" tooltip="parttimejobAPI/src/serviceImp/IJobDetailService.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/serviceImp/IJobDetailService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="2075" selectionTopPixel="513"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserJobShortDAO.java" partName="UserJobShortDAO.java" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/dao/UserJobShortDAO.java" title="UserJobShortDAO.java" tooltip="parttimejobAPI/src/dao/UserJobShortDAO.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/dao/UserJobShortDAO.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1427" selectionTopPixel="0"/>
-</editor>
 <editor id="com.genuitec.eclipse.springframework.springconfigeditor" name="applicationContext.xml" partName="applicationContext.xml" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/WebRoot/WEB-INF/applicationContext.xml" title="applicationContext.xml" tooltip="parttimejobAPI/WebRoot/WEB-INF/applicationContext.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/WebRoot/WEB-INF/applicationContext.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SessionAction.java" partName="SessionAction.java" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/action/SessionAction.java" title="SessionAction.java" tooltip="parttimejobAPI/src/action/SessionAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/action/SessionAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="241" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SessionService.java" partName="SessionService.java" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/service/SessionService.java" title="SessionService.java" tooltip="parttimejobAPI/src/service/SessionService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/service/SessionService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3714" selectionTopPixel="1471"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdviceAction.java" partName="AdviceAction.java" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/action/AdviceAction.java" title="AdviceAction.java" tooltip="parttimejobAPI/src/action/AdviceAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/action/AdviceAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="189" selectionOffset="652" selectionTopPixel="71"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ChangePasswordAction.java" partName="ChangePasswordAction.java" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/action/ChangePasswordAction.java" title="ChangePasswordAction.java" tooltip="parttimejobAPI/src/action/ChangePasswordAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/action/ChangePasswordAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="92" selectionOffset="1521" selectionTopPixel="656"/>
 </editor>
 <editor id="com.genuitec.eclipse.struts2.editor" name="struts.xml" partName="struts.xml" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/struts.xml" title="struts.xml" tooltip="parttimejobAPI/src/struts.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/struts.xml"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EnterpriseRegisterAction.java" partName="EnterpriseRegisterAction.java" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/action/EnterpriseRegisterAction.java" title="EnterpriseRegisterAction.java" tooltip="parttimejobAPI/src/action/EnterpriseRegisterAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/action/EnterpriseRegisterAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1332" selectionTopPixel="361"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JobDetailService.java" partName="JobDetailService.java" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/service/JobDetailService.java" title="JobDetailService.java" tooltip="parttimejobAPI/src/service/JobDetailService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/service/JobDetailService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="171" selectionOffset="3840" selectionTopPixel="1568"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RegisterAction.java" partName="RegisterAction.java" path="/Users/lee/Desktop/parttimejobAPI/parttimejobAPI/src/action/RegisterAction.java" title="RegisterAction.java" tooltip="parttimejobAPI/src/action/RegisterAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parttimejobAPI/src/action/RegisterAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1178" selectionTopPixel="371"/>
 </editor>
 </editors>
 <views>
@@ -97,7 +97,9 @@
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
-<view id="com.genuitec.eclipse.sqlexplorer.views.ConnectionInfo" partName="DB Connection Info"/>
+<view id="com.genuitec.eclipse.sqlexplorer.views.ConnectionInfo" partName="DB Connection Info">
+<viewState/>
+</view>
 <view id="com.genuitec.org.hibernate.eclipse.console.views.QueryPageTabView" partName="Hibernate Query Result">
 <viewState/>
 </view>
@@ -111,7 +113,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (100 of 475 items)"/>
+<category IMemento.internal.id="Warnings (100 of 498 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -186,7 +188,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.genuitec.eclipse.sqlexplorer.views.DatabaseView" activePerspective="com.genuitec.eclipse.sqlexplorer.perspectives.SQLExplorerPluginPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -779,154 +781,148 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/parttimejobAPI/src/action/SignInAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/parttimejobAPI/src/service/JobDetailService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/parttimejobAPI/src/serviceImp/IJobDetailService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/parttimejobAPI/src/dao/UserJobShortDAO.java"/>
-<editor configurationname="parttimejobAPI" editorInputType="CriteriaEditorStorageEditorInput" factoryID="org.hibernate.eclipse.criteriaeditor.CriteriaEditorInputFactory" id="com.genuitec.eclipse.hibernate.editors.mecriteriaeditor" storageContent="break;" storageName="Criteria:parttimejobAPI"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.springframework.springconfigeditor" path="/parttimejobAPI/WebRoot/WEB-INF/applicationContext.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/parttimejobAPI/src/action/SessionAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/parttimejobAPI/src/service/SessionService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/parttimejobAPI/WebRoot/WEB-INF/applicationContext.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/parttimejobAPI/src/action/AdviceAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/parttimejobAPI/src/action/ChangePasswordAction.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" path="/parttimejobAPI/src/struts.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/parttimejobAPI/src/action/EnterpriseRegisterAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/parttimejobAPI/src/serviceImp/IJobDetailService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/parttimejobAPI/src/service/JobDetailService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/parttimejobAPI/src/action/RegisterAction.java"/>
 </editors>
-<item historyLabel="UserJobShortDAO.java" index="3">
-<position info="not_deleted" x="4940" y="0"/>
+<item historyLabel="applicationContext.xml" index="0"/>
+<item historyLabel="SessionService.java" index="2">
+<position info="not_deleted" x="729" y="20"/>
 </item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="14484" y="0"/>
+<item historyLabel="applicationContext.xml" index="0">
+<position info="not_deleted" x="826" y="0"/>
 </item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="14498" y="0"/>
+<item historyLabel="applicationContext.xml" index="3">
+<position info="not_deleted" x="519" y="0"/>
 </item>
-<item historyLabel="Criteria:parttimejobAPI-&gt;JobDetailService.java" index="4">
+<item historyLabel="applicationContext.xml" index="3">
+<position info="not_deleted" x="555" y="50"/>
+</item>
+<item historyLabel="SessionService.java" index="2">
+<position info="not_deleted" x="729" y="20"/>
+</item>
+<item historyLabel="applicationContext.xml" index="0"/>
+<item historyLabel="SessionService.java" index="2">
+<position info="not_deleted" x="729" y="20"/>
+</item>
+<item historyLabel="applicationContext.xml" index="0"/>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="961" y="0"/>
+</item>
+<item historyLabel="AdviceAction.java" index="4">
+<position info="not_deleted" x="731" y="89"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1635" y="0"/>
+</item>
+<item historyLabel="AdviceAction.java" index="4">
+<position info="not_deleted" x="652" y="189"/>
+</item>
+<item historyLabel="applicationContext.xml" index="0"/>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1635" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1428" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1466" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1198" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1237" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1274" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1299" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1361" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1361" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1332" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1332" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1332" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1523" y="0"/>
+</item>
+<item historyLabel="ChangePasswordAction.java" index="5">
+<position info="not_deleted" x="1521" y="92"/>
+</item>
+<item historyLabel="SessionService.java" index="2">
+<position info="not_deleted" x="729" y="20"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1523" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1503" y="0"/>
+</item>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="1599" y="0"/>
+</item>
+<item historyLabel="applicationContext.xml" index="0"/>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="241" y="13"/>
+</item>
+<item historyLabel="applicationContext.xml" index="0"/>
+<item historyLabel="SessionService.java" index="2">
+<position info="not_deleted" x="495" y="14"/>
+</item>
+<item historyLabel="applicationContext.xml" index="0"/>
+<item historyLabel="struts.xml" index="6"/>
+<item historyLabel="SessionAction.java" index="1">
+<position info="not_deleted" x="241" y="13"/>
+</item>
+<item historyLabel="struts.xml" index="6"/>
+<item historyLabel="SessionService.java" index="2">
+<position info="not_deleted" x="3715" y="0"/>
+</item>
+<item historyLabel="IJobDetailService.java" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="14498" y="0"/>
+<item historyLabel="SessionService.java" index="2">
+<position info="not_deleted" x="3715" y="0"/>
 </item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="13675" y="47"/>
+<item historyLabel="JobDetailService.java" index="8">
+<position info="not_deleted" x="3840" y="23"/>
 </item>
-<item historyLabel="IJobDetailService.java" index="2">
-<position info="not_deleted" x="1877" y="0"/>
+<item historyLabel="SessionService.java" index="2">
+<position info="not_deleted" x="3090" y="2"/>
 </item>
-<item historyLabel="UserJobShortDAO.java" index="3">
-<position info="not_deleted" x="1427" y="0"/>
+<item historyLabel="JobDetailService.java" index="8">
+<position info="not_deleted" x="3840" y="171"/>
 </item>
-<item historyLabel="SignInAction.java" index="0">
+<item historyLabel="SessionService.java" index="2">
+<position info="not_deleted" x="3417" y="7"/>
+</item>
+<item historyLabel="RegisterAction.java" index="9">
+<position info="not_deleted" x="1178" y="0"/>
+</item>
+<item historyLabel="SessionService.java" index="2">
+<position info="not_deleted" x="3417" y="7"/>
+</item>
+<item active="true" historyLabel="SessionService.java" index="2">
 <position/>
-</item>
-<item historyLabel="SignInAction.java" index="0">
-<position info="not_deleted" x="1963" y="0"/>
-</item>
-<item historyLabel="SignInAction.java" index="0">
-<position info="not_deleted" x="1994" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="13675" y="47"/>
-</item>
-<item historyLabel="SignInAction.java" index="0">
-<position info="not_deleted" x="1935" y="0"/>
-</item>
-<item historyLabel="IJobDetailService.java" index="2">
-<position info="not_deleted" x="2075" y="8"/>
-</item>
-<item historyLabel="SignInAction.java" index="0">
-<position info="not_deleted" x="1935" y="0"/>
-</item>
-<item historyLabel="SignInAction.java" index="0">
-<position info="not_deleted" x="1992" y="0"/>
-</item>
-<item historyLabel="SignInAction.java" index="0">
-<position info="not_deleted" x="1344" y="0"/>
-</item>
-<item historyLabel="SignInAction.java" index="0">
-<position info="not_deleted" x="2515" y="0"/>
-</item>
-<item historyLabel="applicationContext.xml" index="5"/>
-<item historyLabel="SignInAction.java" index="0">
-<position info="not_deleted" x="225" y="12"/>
-</item>
-<item historyLabel="applicationContext.xml" index="5"/>
-<item historyLabel="SignInAction.java" index="0">
-<position info="not_deleted" x="379" y="35"/>
-</item>
-<item historyLabel="applicationContext.xml" index="5">
-<position info="not_deleted" x="508" y="0"/>
-</item>
-<item historyLabel="SignInAction.java" index="0">
-<position info="not_deleted" x="417" y="0"/>
-</item>
-<item historyLabel="applicationContext.xml" index="5"/>
-<item historyLabel="struts.xml" index="6"/>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="13675" y="47"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="13232" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="12941" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="12795" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="13100" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="13605" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="12513" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="12548" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="12587" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="12736" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="12695" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="12753" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="12086" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="14068" y="0"/>
-</item>
-<item historyLabel="SignInAction.java" index="0">
-<position info="not_deleted" x="417" y="0"/>
-</item>
-<item historyLabel="UserJobShortDAO.java" index="3">
-<position info="not_deleted" x="1427" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="14068" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="13946" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="13936" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="13943" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="13945" y="0"/>
-</item>
-<item historyLabel="JobDetailService.java" index="1">
-<position info="not_deleted" x="13726" y="0"/>
-</item>
-<item historyLabel="struts.xml" index="6"/>
-<item active="true" historyLabel="EnterpriseRegisterAction.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -949,50 +945,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EnterpriseRegisterAction.java" tooltip="parttimejobAPI/src/action/EnterpriseRegisterAction.java">
-<persistable path="/parttimejobAPI/src/action/EnterpriseRegisterAction.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RegisterAction.java" tooltip="parttimejobAPI/src/action/RegisterAction.java">
+<persistable path="/parttimejobAPI/src/action/RegisterAction.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" name="struts.xml" tooltip="parttimejobAPI/src/struts.xml">
-<persistable path="/parttimejobAPI/src/struts.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.springframework.springconfigeditor" name="applicationContext.xml" tooltip="parttimejobAPI/WebRoot/WEB-INF/applicationContext.xml">
-<persistable path="/parttimejobAPI/WebRoot/WEB-INF/applicationContext.xml"/>
-</file>
-<file factoryID="org.hibernate.eclipse.criteriaeditor.CriteriaEditorInputFactory" id="com.genuitec.eclipse.hibernate.editors.mecriteriaeditor" name="Criteria:parttimejobAPI" tooltip="Criteria:parttimejobAPI">
-<persistable configurationname="parttimejobAPI" editorInputType="CriteriaEditorStorageEditorInput" storageContent="break;" storageName="Criteria:parttimejobAPI"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserJobShortDAO.java" tooltip="parttimejobAPI/src/dao/UserJobShortDAO.java">
-<persistable path="/parttimejobAPI/src/dao/UserJobShortDAO.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JobDetailService.java" tooltip="parttimejobAPI/src/service/JobDetailService.java">
+<persistable path="/parttimejobAPI/src/service/JobDetailService.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IJobDetailService.java" tooltip="parttimejobAPI/src/serviceImp/IJobDetailService.java">
 <persistable path="/parttimejobAPI/src/serviceImp/IJobDetailService.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserJobLongSigninDAO.java" tooltip="parttimejobAPI/src/dao/UserJobLongSigninDAO.java">
-<persistable path="/parttimejobAPI/src/dao/UserJobLongSigninDAO.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="UserJobLongSignin.hbm.xml" tooltip="parttimejobAPI/src/model/UserJobLongSignin.hbm.xml">
-<persistable path="/parttimejobAPI/src/model/UserJobLongSignin.hbm.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetMyRegistrationDetailAction.java" tooltip="parttimejobAPI/src/action/GetMyRegistrationDetailAction.java">
-<persistable path="/parttimejobAPI/src/action/GetMyRegistrationDetailAction.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" name="struts.xml" tooltip="parttimejobAPI/src/struts.xml">
+<persistable path="/parttimejobAPI/src/struts.xml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ChangePasswordAction.java" tooltip="parttimejobAPI/src/action/ChangePasswordAction.java">
 <persistable path="/parttimejobAPI/src/action/ChangePasswordAction.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EnterpriseChangePwdAction.java" tooltip="parttimejobAPI/src/action/EnterpriseChangePwdAction.java">
-<persistable path="/parttimejobAPI/src/action/EnterpriseChangePwdAction.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdviceAction.java" tooltip="parttimejobAPI/src/action/AdviceAction.java">
+<persistable path="/parttimejobAPI/src/action/AdviceAction.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="UserJobLong.hbm.xml" tooltip="parttimejobAPI/src/model/UserJobLong.hbm.xml">
-<persistable path="/parttimejobAPI/src/model/UserJobLong.hbm.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserInfoService.java" tooltip="parttimejobAPI/src/service/UserInfoService.java">
+<persistable path="/parttimejobAPI/src/service/UserInfoService.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserJobLong.java" tooltip="parttimejobAPI/src/model/UserJobLong.java">
-<persistable path="/parttimejobAPI/src/model/UserJobLong.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SessionService.java" tooltip="parttimejobAPI/src/service/SessionService.java">
+<persistable path="/parttimejobAPI/src/service/SessionService.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyRegistrationService.java" tooltip="parttimejobAPI/src/service/MyRegistrationService.java">
-<persistable path="/parttimejobAPI/src/service/MyRegistrationService.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SessionAction.java" tooltip="parttimejobAPI/src/action/SessionAction.java">
+<persistable path="/parttimejobAPI/src/action/SessionAction.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetUserJobAction.java" tooltip="parttimejobAPI/src/action/GetUserJobAction.java">
-<persistable path="/parttimejobAPI/src/action/GetUserJobAction.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="TSession.hbm.xml" tooltip="parttimejobAPI/src/model/TSession.hbm.xml">
+<persistable path="/parttimejobAPI/src/model/TSession.hbm.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TSessionDAO.java" tooltip="parttimejobAPI/src/dao/TSessionDAO.java">
+<persistable path="/parttimejobAPI/src/dao/TSessionDAO.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TSession.java" tooltip="parttimejobAPI/src/TSession.java">
+<persistable path="/parttimejobAPI/src/TSession.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Session.java" tooltip="parttimejobAPI/src/Session.java">
+<persistable path="/parttimejobAPI/src/Session.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SessionDAO.java" tooltip="parttimejobAPI/src/SessionDAO.java">
+<persistable path="/parttimejobAPI/src/SessionDAO.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AbstractSession.java" tooltip="parttimejobAPI/src/AbstractSession.java">
+<persistable path="/parttimejobAPI/src/AbstractSession.java"/>
 </file>
 </mruList>
 </workbench>
